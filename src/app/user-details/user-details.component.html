@@ -1,0 +1,21 @@
+<div class="home-page-container">
+  <mat-card class="content-container">
+    <section class="content-wrapper" *ngIf="user">
+      <header>
+        <img  alt='user-img' [src]="user?.avatar_url" />
+        <div>
+          <h2>Welcome {{user?.name}}</h2>
+          <p>Followers: <b>{{user?.followers}}</b></p>
+        </div>
+      </header>
+      <hr>
+      <div class="data-wrapper">
+        <div class="content"><span class="content-text">Username:   </span>{{user?.login}}</div>
+        <div class="content"><span class="content-text">Firstname:  </span>{{userFormContent?.firstName}}</div>
+        <div class="content"><span class="content-text">Lastname:   </span>{{userFormContent?.lastName}}</div>
+        <div class="content"><span class="content-text">Email Id:   </span>{{userFormContent?.email}}</div>
+        <div class="content"><span class="content-text">Bio:  </span>{{user?.bio}}</div>
+      </div>
+    </section>
+  </mat-card>
+</div>
